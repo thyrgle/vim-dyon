@@ -16,9 +16,6 @@ syntax keyword dyonKeyword mut go in any vec4 grab
 
 highlight link dyonKeyword Keyword
 
-" Matches // style comment
-syntax match dyonComment "\v//*$"
-highlight link dyonComment Comment
 
 " Arithmetic operations
 
@@ -92,5 +89,10 @@ highlight link dyonNumber Number
 
 syntax region dyonString start=/\v"/ skip=/\v\\./ end=/\v"/
 highlight link dyonString String
+
+" Matches // style comment
+syntax region dyonComment start="//" end="$"
+highlight link dyonComment Comment
+
 
 let b:current_syntax = "dyon"
