@@ -51,11 +51,11 @@ syntax match dyonOperator "\v:\="
 " a && b
 syntax match dyonOperator "\v\&\&"
 " a and b
-syntax match dyonOperator "\vand"
+syntax match dyonOperator "\v and "
 " a || b
 syntax match dyonOperator "\v\|\|"
 " a or b
-syntax match dyonOperator "\vor"
+syntax match dyonOperator "\v or "
 
 highlight link dyonOperator Operator
 
