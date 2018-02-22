@@ -16,6 +16,10 @@ syntax keyword dyonKeyword mut go in any vec4 grab
 
 highlight link dyonKeyword Keyword
 
+" Highlight functions 
+" (see: https://stackoverflow.com/a/45626295/667648)
+syntax match dyonFunction "\zs\(\k\w*\)*\s*\ze(" 
+highlight link dyonFunction Function
 
 " Arithmetic operations
 
