@@ -63,11 +63,15 @@ syntax match dyonOperator "\v or "
 
 highlight link dyonOperator Operator
 
-syntax match dyonNumber "\v^-*[0-9,\.]+$"
-highlight link dyonNumber Number
-
+" Numbers and strings
+" (see
+" https://github.com/pangloss/vim-javascript/blob/89fcb6bfcada1c4256284723778d128342b48350/syntax/javascript.vim#L57)
+syntax match dyonString /\c\<\%(\d\+\%(e[+-]\=\d\+\)\=\|0b[01]\+\|0o\o\+\|0x\x\+\)\>/
 syntax region dyonString start=/\v"/ skip=/\v\\./ end=/\v"/
 highlight link dyonString String
+
+highlight link dyonNumber String
+
 
 " Matches // style comment
 syntax region dyonComment start="//" end="$"
