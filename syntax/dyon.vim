@@ -50,6 +50,8 @@ syntax match dyonOperator "\v\^\="
 " a := b
 syntax match dyonOperator "\v:\="
 
+syntax match dyonOperator "\v[a-zA-z]+:"
+
 " Boolean operations
 
 " a && b
